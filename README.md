@@ -1,4 +1,4 @@
-# CloudFuzz.me
+# CloudFuzz
 A blockchain solution for digital forensic evidence storage and verification.
 
 ## **REQUIREMENTS**
