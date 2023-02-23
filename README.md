@@ -1,23 +1,26 @@
-# Block
-Blockchain Forensic Storage
+# CloudFuzz.me
+A blockchain solution for digital forensic evidence storage and verification.
 
-Our goal is to make a secure, immutable way of storing forensic evidence and to compare the evidence to hashes of viruses to obtain the similarity.
+## **REQUIREMENTS**
+- *Atleast* 3 systems with minimum specifications:
+  + 4Gb RAM
+  + 500Gb internal storage
+  + i3 processor
+  + OS-Ubuntu 18.04.6(Bionic Beaver)
+  + NIC(for physical topology setup)
+- Multiple Ethernet cables to facilitate topology setup.
+- Stable WLAN or LAN connection.
+- Stable internet connection during inastallations and setup.
 
-Prepare the Operating System
-The OS must be prepared to host the Management Server using the following steps. These steps must be performed on each Management Server node.
+## **PROCEDURE**
 
-Log in to your OS as root.
+### *STEP 1*:
+ + **CREATE A CLOUD**: Refer to CloudStack documentation to create a private cloud.
+ + **SETUP MANAGEMENT SERVER**:Use system with highest specifications as the management server and the rest as Host machines to host VM instances.
 
-Check for a fully qualified hostname.
+### *STEP 2*:
+ + **SETUP KVM**: In machines other than the machine with management server, install KVM-QEMU and enable it for virtualization.
+ + **SETUP CLOUSTACK AGENT**: Install cloudstack agent and setup according to documentation in CloudStack.
 
-hostname --fqdn
-This should return a fully qualified hostname such as “management1.lab.example.org”. If it does not, edit /etc/hosts so that it does.
-
-Make sure that the machine can reach the Internet.
-
-ping cloudstack.apache.org
-Turn on NTP for time synchronization.
-In Ubuntu:
-
-$ apt-get install chrony![installation-complete](https://user-images.githubusercontent.com/106659113/220818136-7adcc23d-4b92-4c60-8f6d-15a01bece8ee.png)
-
+### *STEP 3*:
+ + Connect management server machine with the VMs using virtual network and LAN when required. 
